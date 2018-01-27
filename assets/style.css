@@ -1,0 +1,159 @@
+/*
+*************************
+*       Style.css       *
+*************************
+
+Index:
+1. Base
+2. Login Page (home as default)
+3. Dashboard
+
+*/
+
+
+/********************/
+/*       Base       */
+/********************/
+
+html {
+  font-size: 16px;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  max-height: 100%;
+  background-color: #2980b9;
+  box-sizing: border-box;
+}
+
+
+/**************************/
+/*       Login Page       */
+/**************************/
+.login-form {
+  width: 30%;
+  min-width: 300px;
+  padding: 2em;
+  background-color: #3498db;
+  border-radius: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 3px solid #fff;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.login-form__label {
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.login-form__title{
+  font-size: 3em;
+  font-weight: 300;
+  display: block;
+  width: 100%;
+  margin: 0 0 .5em 0;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.login-form__input {
+  width: 100%;
+  padding: 1ch 2ch;
+  margin: .5em 0 1.5em 0;
+  height: 4ch;
+  border: none;
+  font-weight: 300;
+}
+
+.login-form__input::placeholder {
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  opacity: .5;
+}
+.login-form__input_password { margin-bottom: .5em; }
+
+.login-form__forgot-password {
+  color: #fff;
+  font-size: .7em;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  margin-bottom: 1.5em;
+}
+.login-form__forgot-password:hover { opacity: .7; }
+
+.login-form__button{
+  width: 100%;
+  border: none;
+  height: 4.5ch;
+  cursor: pointer;
+  color: #000000;
+  background-color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+  margin-top: 1em;
+}
+
+.login-form__button_send {
+  border-top: 3px solid #46DC96;
+  color: #46DC96;
+}
+.login-form__button_clear {
+  border-top: 3px solid #e74c3c;
+  color: #e74c3c;
+}
+
+.login-form__button_send:hover {
+  border-color: #46DC96;
+  background-color: #46DC96;
+  color: #ffffff;
+}
+.login-form__button_clear:hover {
+  border-color: #FF5A5A;
+  background-color: #FF5A5A;
+  color: #ffffff;
+}
+
+.login-form_fail {
+  animation-name: login-failed;
+  animation-duration: .3s;
+  animation-iteration-count: infinite;
+}
+@keyframes login-failed {
+  0%   { margin-left: 0; margin-right: 0; }
+  25%  { margin-left: 5em; margin-right: 0; }
+  50%  { margin-left: 0; margin-right: 5em; }
+  100% { margin-left: 0; margin-right: 0; }
+}
+
+
+/**************************/
+/*       Dashboard       */
+/**************************/
+.dashboard {
+  background-color: #fff;
+  width: 85%;
+  height: 85%;
+  min-width: 200px;
+  border-radius: .5%;
+  padding: 2em;
+}
+.dashboard__title {
+  font-size: 1.5em;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+  color: #2980b9;
+}
